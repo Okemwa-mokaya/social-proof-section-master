@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;700&display=swap');
+:root{
+  --Very-Dark-Magenta: hsl(300, 43%, 22%);
+  --Soft-Pink: hsl(333, 80%, 67%);
+  --Dark-Grayish-Magenta: hsl(303, 10%, 53%);
+  --Light-Grayish-Magenta: hsl(300, 24%, 96%);
+  --White: hsl(0, 0%, 100%);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+img,
+svg{
+  max-width: 100%;
+  display: block;
+}
+body{
+  font-family: "League Spartan", sans-serif;
+  font-size: 15px;
+  background-image: url(images/bg-pattern-top-desktop.svg), url(images/bg-pattern-bottom-desktop.svg);
+  background-repeat: no-repeat, no-repeat;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  margin: 1rem;
+}
+.reviews{
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 2rem;
+  margin: 1rem;
+}
+.showcase{
+  display: grid;
+  gap: 2rem;
+}
+.seller{
+  text-align: center;
+}
+.figures{
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  font-size: 40px;
+  margin-bottom: 1rem;
+}
+.seller-views{
+  color: var(--Dark-Grayish-Magenta);
+  line-height: 1;
+  font-weight: 400;
+  font-size: 18px;
+}
+.star-reviews{
+  display: grid;
+  gap: 1rem;
+}
+.star{
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.star-in-reviews,
+.report-guru,
+.besttech{
+  display: grid;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  background-color: var(--Light-Grayish-Magenta);
+}
+.rated{
+  color: var(--Very-Dark-Magenta);
+  font-weight: 700;
+  text-align: center;
+}
+.buyer{
+  display: grid;
+  gap: 1rem;
+}
+.colton,
+.irene,
+.anne{
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: var(--Very-Dark-Magenta);
+}
+.flexbox{
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+.flexbox img{
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+}
+.name{
+  display: grid;
+  gap: 0.5rem;
+}
+.name span{
+  color: var(--White);
+  font-weight: 700;
+  font-size: 18px;
+}
+h1.name,
+h2.name,
+h3.name{
+  color: var(--Soft-Pink);
+  font-weight: 400;
+  font-size: 18px;
+}
+.buyer-review{
+  color: var(--White);
+  line-height: 1.2;
+  font-weight: 500;
+  font-size: 18px;
+}
+@media (min-width: 750px){
+    .seller{
+      max-width: 600px;
+      margin: auto;
+    }
+    .star-reviews{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+    }
+    .buyer{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1rem;
+      }
+}
+@media (min-width: 1024px){
+    .seller{
+      text-align: left;
+    }
+    .seller{
+        margin-right: 10rem;
+    }
+    .figures{
+        margin-right: 10rem;
+    }
+    .showcase{
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .star-reviews{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .star-reviews > div:nth-child(1){
+      transform: translate(-10%);
+    }
+    .star-reviews > div:nth-child(2){
+      transform: translate(-5%);
+    }
+    .buyer > div:nth-child(2){
+      transform: translateY(10%);
+    }
+    .buyer > div:nth-child(3){
+      transform: translateY(20%);
+    }
+}
